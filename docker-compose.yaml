@@ -1,0 +1,15 @@
+services:
+  app:
+    build:
+      dockerfile: dev.Dockerfile
+      context: .
+    environment:
+      APP_DEBUG: "false"
+    ports:
+      - "4000:4000"
+    expose:
+      - "4000"
+    volumes:
+      - .:/app_src
+    # env_file:
+    #   - .env
