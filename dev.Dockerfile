@@ -18,7 +18,7 @@ COPY --from=wkhtmltopdf /bin/libwkhtmltox* /usr/local/bin/
 # Install golang air autoreload package
 RUN go install github.com/air-verse/air@v1.52.3
 
-# Set the workdir to dev folder
+# Set the workdir to app_src folder, all files in this project directory will be mounted here
 WORKDIR /app_src
 
 # Run the autoreload 
